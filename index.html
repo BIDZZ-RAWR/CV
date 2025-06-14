@@ -1,119 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CV Digital</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="CV Digital Professional - Portfolio and Resume">
-    <meta name="keywords" content="CV, Resume, Portfolio, Digital CV">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV of Muhammad Abid Feriwijaya H., a web developer, reverse engineer, and technology enthusiast.">
+    <meta name="keywords" content="CV, resume, web developer, reverse engineer, ethical hacker, Muhammad Abid">
     <meta name="author" content="Muhammad Abid Feriwijaya H.">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="CV Digital">
-    <meta property="og:description" content="Professional Digital CV and Portfolio">
-    <meta property="og:image" content="bidzz.jpg">
+    <title>CV Muhammad Abid Feriwijaya H.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <!-- Menu Button -->
-    <div class="menu-btn" aria-label="Menu">
-        <svg viewBox="0 0 100 80" width="20" height="20" fill="#ffffff">
-            <rect width="100" height="15"></rect>
-            <rect y="30" width="100" height="15"></rect>
-            <rect y="60" width="100" height="15"></rect>
-        </svg>
-    </div>
+    <div class="container" id="cv-content">
+        <!-- Header -->
+        <header class="header">
+            <img src="bidzz.png" alt="Profile picture of Muhammad Abid Feriwijaya H." class="profile-pic" loading="lazy">
+            <div class="header-text">
+                <h1>Muhammad Abid Feriwijaya H.</h1>
+                <h3>Lulusan Pondok Pesantren Nabil Husein</h3>
+            </div>
+        </header>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-        <!-- Navigation items will be added by JavaScript -->
-    </nav>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Me -->
+            <section class="section about">
+                <h2><i class="fas fa-info-circle" aria-hidden="true"></i> Tentang Saya</h2>
+                <p>Saya lulusan Pondok Pesantren Nabil Husein yang bersemangat dalam teknologi dan pelayanan. Berpengalaman sebagai kasir, juru masak, pekerja lapangan, dan pengembang web front-end, saya memiliki keterampilan komunikasi, kerja tim, dan adaptasi yang kuat. Aktif mengembangkan proyek teknologi seperti website dan alat pengembang, serta berbagi pengetahuan melalui tutorial YouTube. Saya siap berkontribusi secara inovatif dan solutif.</p>
+            </section>
 
-    <!-- Overlay -->
-    <div class="overlay" aria-hidden="true"></div>
+            <!-- Personal Profile -->
+            <section class="section profile">
+                <h2><i class="fas fa-user" aria-hidden="true"></i> Profil Pribadi</h2>
+                <ul>
+                    <li><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span class="label">Tanggal Lahir:</span> 8 Mei 2007</li>
+                    <li><i class="fas fa-venus-mars" aria-hidden="true"></i> <span class="label">Jenis Kelamin:</span> Laki-laki</li>
+                    <li><i class="fas fa-ring" aria-hidden="true"></i> <span class="label">Status Pernikahan:</span> Belum Menikah</li>
+                    <li><i class="fas fa-flag" aria-hidden="true"></i> <span class="label">Kewarganegaraan:</span> Indonesia</li>
+                </ul>
+            </section>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>ABOUT ME</h1>
-            <img src="bidzz.jpg" alt="Muhammad Abid Feriwijaya H." class="profile-img" loading="lazy">
-        </div>
+            <!-- Contact Info -->
+            <section class="section contact">
+                <h2><i class="fas fa-address-card" aria-hidden="true"></i> Informasi Kontak</h2>
+                <ul>
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> <span class="label">Email:</span> <a href="mailto:squadofthehervian@gmail.com">squadofthehervian@gmail.com</a></li>
+                    <li><i class="fas fa-phone" aria-hidden="true"></i> <span class="label">WhatsApp:</span> <a href="https://wa.me/6282350265164">0823-5026-5164</a></li>
+                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="label">Alamat:</span> <a href="https://maps.app.goo.gl/FZuBnbGTTbbUQZCV9" target="_blank">Jl. Kh. Wahid Hasyim II Gg. Wahyu</a></li>
+                    <li><i class="fas fa-globe" aria-hidden="true"></i> <span class="label">Portfolio:</span> <a href="https://bidzz-rawr.github.io/ABOUT-ME" target="_blank">Lihat Portfolio</a></li>
+                </ul>
+            </section>
 
-        <!-- Personal Data Section -->
-        <div class="section" id="data-pribadi">
-            <h2>DATA PRIBADI</h2>
-            <ul>
-                <li><i class="fas fa-user"></i> Nama: Muhammad Abid Feriwijaya H.</li>
-                <li><i class="fas fa-calendar"></i> Tanggal Lahir: 08 Mei 2007</li>
-                <li><i class="fas fa-venus-mars"></i> Jenis Kelamin: Laki-laki</li>
-                <li><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/082350265164" target="_blank" rel="noopener noreferrer">0823-5026-5164</a></li>
-                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:squadofthehervian@gmail.com">squadofthehervian@gmail.com</a></li>
-                <li><i class="fas fa-map-marker-alt"></i> Alamat: <a href="https://maps.app.goo.gl/FZuBnbGTTbbUQZCV9" target="_blank" rel="noopener noreferrer">Jl.Kh.Wahid Hasyim II Gg.Wahyu</a></li>
-                <li><i class="fas fa-globe"></i> Website: <a href="https://bidzz-rawr.github.io/ABOUT-ME" target="_blank" rel="noopener noreferrer">Portfolio Website</a></li>
-            </ul>
-        </div>
+            <!-- Education -->
+            <section class="section education">
+                <h2><i class="fas fa-graduation-cap" aria-hidden="true"></i> Pendidikan</h2>
+                <div class="item">
+                    <h3>MTs Nabil Husein</h3>
+                    <p class="period">2019 - 2022</p>
+                    <p>Menyelesaikan pendidikan menengah dengan fokus pada studi agama dan akademik.</p>
+                </div>
+                <div class="item">
+                    <h3>Pondok Pesantren Nabil Husein</h3>
+                    <p class="period">2019 - 2022</p>
+                    <p>Mempelajari nilai-nilai kepemimpinan, disiplin, dan kerja sama tim melalui program pesantren.</p>
+                </div>
+            </section>
 
-        <!-- Education Section -->
-        <div class="section" id="pendidikan">
-            <h2>PENDIDIKAN</h2>
-            <ul>
-                <li><i class="fas fa-graduation-cap"></i> Mts Nabil Husein, 2022</li>
-                <li><i class="fas fa-school"></i> Pondok Pesantren Nabil Husein, 2022</li>
-            </ul>
-        </div>
+            <!-- Work Experience -->
+            <section class="section experience">
+                <h2><i class="fas fa-briefcase" aria-hidden="true"></i> Pengalaman Kerja</h2>
+                <div class="item">
+                    <h3>Kasir dan Juru Masak - Warung Makan</h3>
+                    <p class="period">2022</p>
+                    <p>Mengelola lebih dari 100 transaksi harian, menyiapkan makanan dengan efisien, dan meningkatkan kepuasan pelanggan.</p>
+                </div>
+                <div class="item">
+                    <h3>Pekerja Lapangan - PT. Telkom Indonesia</h3>
+                    <p class="period">2023 - 2024</p>
+                    <p>Mendukung instalasi dan pemeliharaan infrastruktur telekomunikasi, menyelesaikan 40+ tugas lapangan dengan tingkat keberhasilan 98%.</p>
+                </div>
+                <div class="item">
+                    <h3>Pengembang Web Front-End - Proyek Freelance</h3>
+                    <p class="period">2022 - Sekarang</p>
+                    <p>Mengembangkan 5+ antarmuka pengguna responsif menggunakan HTML, CSS, dan JavaScript, dengan fokus pada pengalaman pengguna yang optimal.</p>
+                </div>
+                <div class="item">
+                    <h3>Jasa Enkripsi dan Obfuscation Aplikasi - Proyek Freelance</h3>
+                    <p class="period">2024 - Sekarang</p>
+                    <p>Menyediakan layanan enkripsi dan obfuscation untuk file classes.dex, resources, dan assets pada aplikasi Android, meningkatkan keamanan kode dan perlindungan data klien.</p>
+                </div>
+                <div class="item">
+                    <h3>Jasa Decompile Aplikasi Terenkripsi - Proyek Freelance</h3>
+                    <p class="period">2024 - Sekarang</p>
+                    <p>Melakukan dekompilasi aplikasi Android dengan classes.dex terenkripsi untuk analisis dan pemulihan kode, memastikan proses dilakukan secara etis sesuai kebutuhan klien.</p>
+                </div>
+                <div class="item">
+                    <h3>Reverse Engineering dan Bypass Login Aplikasi Mod - Proyek Freelance</h3>
+                    <p class="period">2024 - Sekarang</p>
+                    <p>Menganalisis dan memodifikasi aplikasi modifikasi untuk bypass halaman login, dengan fokus pada reverse engineering dan cracking secara etis untuk pengujian keamanan.</p>
+                </div>
+            </section>
 
-        <!-- Experience Section -->
-        <div class="section" id="pengalaman">
-            <h2>PENGALAMAN</h2>
-            <ul>
-                <li><i class="fas fa-store"></i> Warung Makan (Kasir & Cooker)</li>
-                <li><i class="fas fa-building"></i> PT.Telkom Indonesia (Lapangan)</li>
-                <li><i class="fas fa-laptop-code"></i> Project Web Front End</li>
-            </ul>
-        </div>
+            <!-- Projects -->
+            <section class="section projects">
+                <h2><i class="fas fa-code-branch" aria-hidden="true"></i> Proyek</h2>
+                <div class="item">
+                    <h3>Takoyaki Mayumi Website</h3>
+                    <p class="period">2025</p>
+                    <p>Mengembangkan website responsif untuk brand Takoyaki Mayumi di Samarinda menggunakan HTML, CSS, dan JavaScript, meningkatkan visibilitas online.</p>
+                    <p><a href="https://takoyaki-mayumi.netlify.app" target="_blank">Kunjungi Situs</a></p>
+                </div>
+                <div class="item">
+                    <h3>BidzzMod Platform</h3>
+                    <p class="period">2025</p>
+                    <p>Membangun platform untuk berbagi aplikasi modifikasi secara etis kepada komunitas Telegram, dengan lebih dari 200 anggota aktif.</p>
+                    <p><a href="https://bidzzmod.my.id" target="_blank">Kunjungi Situs</a></p>
+                </div>
+                <div class="item">
+                    <h3>Lua XOR Encrypt</h3>
+                    <p class="period">2024</p>
+                    <p>Mengembangkan alat enkripsi Lua berbasis XOR untuk pengembang, mendukung Game Guardian dan Logitech Macro, dengan fokus pada privasi.</p>
+                    <p><a href="https://bidzz-rawr.github.io/lua-xor-encrypt/" target="_blank">Kunjungi Situs</a></p>
+                    <p><a href="https://github.com/bidzz-rawr/lua-xor-encrypt" target="_blank">Lihat di GitHub</a></p>
+                </div>
+                <div class="item">
+                    <h3>Firebase Breaker Pro</h3>
+                    <p class="period">2024</p>
+                    <p>Membuat alat berbasis web untuk menganalisis database Firebase publik secara real-time, dengan desain modern dan fitur copy satu klik.</p>
+                    <p><a href="https://bidzz-rawr.github.io/Firebase-Breaker" target="_blank">Kunjungi Situs</a></p>
+                    <p><a href="https://github.com/BIDZZ-RAWR/Firebase-Breaker" target="_blank">Lihat di GitHub</a></p>
+                </div>
+            </section>
 
-        <!-- Skills Section -->
-        <div class="section" id="keterampilan">
-            <h2>KETERAMPILAN</h2>
-            <ul>
-                <li><i class="fas fa-desktop"></i> Mengoperasikan Komputer</li>
-                <li><i class="fas fa-code"></i> Web Designer</li>
-                <li><i class="fab fa-python"></i> Python Programming Language</li>
-            </ul>
-        </div>
+            <!-- Skills -->
+            <section class="section skills">
+                <h2><i class="fas fa-tools" aria-hidden="true"></i> Keterampilan</h2>
+                <ul class="skills-list">
+                    <li>
+                        <span><i class="fas fa-desktop" aria-hidden="true"></i> Reverse Engineer</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 87%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-shield-alt" aria-hidden="true"></i> Ethical Hacker</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 42%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-paint-brush" aria-hidden="true"></i> Web Designer</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 58%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-code" aria-hidden="true"></i> Software Developer</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 62%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-users" aria-hidden="true"></i> Kerja Sama Tim</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="section contact-form">
+                <h2><i class="fas fa-comment-dots" aria-hidden="true"></i> Hubungi Saya</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" name="name" required aria-required="true" aria-label="Nama lengkap">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required aria-required="true" aria-label="Alamat email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message" rows="4" required aria-required="true" aria-label="Pesan Anda"></textarea>
+                    </div>
+                    <button type="submit" class="btn" aria-label="Kirim pesan via WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> Kirim via WhatsApp</button>
+                    <button type="button" class="btn" id="email-btn" aria-label="Kirim pesan via Email"><i class="fas fa-envelope" aria-hidden="true"></i> Kirim via Email</button>
+                </form>
+            </section>
+        </main>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="social-links">
-            </div>
-            <p>&copy; <span id="year"></span> Muhammad Abid Feriwijaya H. All rights reserved.</p>
+            <p>© 2025 Bidzz Official</p>
         </footer>
     </div>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Loading Spinner -->
-    <div class="loading-spinner">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- Scripts -->
+    <!-- Script -->
     <script src="script.js"></script>
-    <script>
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Preload Images -->
-    <link rel="preload" as="image" href="bidzz.jpg">
-    <link rel="preload" as="image" href="wave.png">
 </body>
 </html>

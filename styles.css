@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e7eb;
+    color: #1e3a8a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    color: #ffffff;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    margin-right: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.header-text h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #f0f7ff;
+    opacity: 0.9;
+}
+
+/* Main Content Section */
+.main-content {
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+}
+
+.section h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3b82f6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section ul {
+    list-style-type: none;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    font-weight: 600;
+    color: #1e3a8a;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+/* Specific styling for contact and profile sections */
+.contact ul li, .profile ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact ul li a, .profile ul li span:not(.label) {
+    flex: 1;
+}
+
+/* About Section */
+.about p {
+    font-size: 1rem;
+    color: #1e3a8a;
+    line-height: 1.7;
+}
+
+/* Education Section */
+.item {
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    font-size: 1.2rem;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.period {
+    font-size: 0.95rem;
+    color: #4b5563;
+    font-style: italic;
+}
+
+.item p {
+    font-size: 1rem;
+}
+
+/* Skills Section */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skills-list li {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    color: #1e3a8a;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.progress {
+    height: 14px;
+    background: linear-gradient(45deg, #3b82f6, #93c5fd);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Contact Form Section */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #f9fafb;
+    color: #1e3a8a;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form .btn {
+    margin-top: 15px;
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-form .btn:hover {
+    background: linear-gradient(45deg, #1e40af, #2563eb);
+    transform: translateY(-2px);
+}
+
+.contact-form .btn#email-btn {
+    background: linear-gradient(45deg, #4b5563, #6b7280);
+    margin-left: 12px;
+}
+
+.contact-form .btn#email-btn:hover {
+    background: linear-gradient(45deg, #374151, #4b5563);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    color: #f0f7ff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    page-break-before: avoid;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #93c5fd;
+}
+
+/* PDF-Specific Styles */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 8.27in;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        transform: scale(0.95);
+        transform-origin: top left;
+    }
+
+    .header {
+        background: linear-gradient(45deg, #1e3a8a, #3b82f6) !important;
+        padding: 15px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #ffffff;
+    }
+
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-text h3 {
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .section {
+        margin-bottom: 15px;
+        page-break-inside: avoid;
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+        border-bottom: 2px solid #3b82f6;
+    }
+
+    .section ul li {
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .label {
+        min-width: 90px;
+    }
+
+    .contact ul li, .profile ul li {
+        gap: 6px;
+    }
+
+    .about p {
+        font-size: 0.85rem;
+    }
+
+    .item h3 {
+        font-size: 1rem;
+    }
+
+    .period, .item p {
+        font-size: 0.85rem;
+    }
+
+    .skills-list li {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        background: none;
+    }
+
+    .progress-bar {
+        background: #d1d5db;
+    }
+
+    .progress {
+        background: #3b82f6 !important;
+    }
+
+    .contact-form {
+        display: none;
+    }
+
+    .footer {
+        padding: 10px;
+        background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin: 0 0 15px;
+    }
+
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-text h3 {
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+    }
+
+    .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .section ul li {
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .label {
+        min-width: 100px;
+        display: inline-block;
+    }
+
+    .contact ul li, .profile ul li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .about p {
+        font-size: 0.85rem;
+    }
+
+    .item h3 {
+        font-size: 1.1rem;
+    }
+
+    .period, .item p {
+        font-size: 0.9rem;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-list li {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        margin-top: 5px;
+    }
+
+    .progress {
+        height: 12px;
+    }
+
+    .contact-form label {
+        font-size: 0.85rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+
+    .contact-form textarea {
+        min-height: 80px;
+    }
+
+    .contact-form .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        width: 100%;
+        margin: 8px 0;
+        justify-content: center;
+    }
+
+    .contact-form .btn#email-btn {
+        margin-left: 0;
+    }
+
+    .footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure accessibility */
+.container a {
+    text-decoration: none;
+    color: #3b82f6;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+/* No-print class for PDF */
+.no-print {
+    display: inline-block;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
