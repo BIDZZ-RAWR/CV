@@ -41,7 +41,7 @@ Balas secepatnya ya!`;
 
         // Encode message for URL
         const encodedMessage = encodeURIComponent(whatsappMessage);
-        const phoneNumber = '6281522541170';
+        const phoneNumber = '6282350265164';
         const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
         // Open WhatsApp
