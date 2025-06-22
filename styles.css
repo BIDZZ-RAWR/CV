@@ -40,11 +40,14 @@ body {
 }
 
 .header-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Reduced from 2.5rem for longer name */
     font-weight: 700;
     margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px; /* Slightly reduced from 1.2px for better fit */
+    line-height: 1.2; /* Improved readability */
+    white-space: normal; /* Allow wrapping */
+    word-break: break-word; /* Prevent overflow on smaller screens */
 }
 
 .header-text h3 {
@@ -62,6 +65,7 @@ body {
 .section {
     margin-bottom: 30px;
     page-break-inside: avoid;
+    will-change: transform, opacity;
 }
 
 .section h2 {
@@ -149,6 +153,16 @@ body {
     padding: 0;
     box-shadow: none;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.skills-list li.visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInSkill 0.6s ease-out forwards;
 }
 
 .progress-bar {
@@ -163,7 +177,12 @@ body {
     height: 14px;
     background: linear-gradient(45deg, #3b82f6, #93c5fd);
     border-radius: 10px;
-    transition: width 0.5s ease;
+    width: 0;
+    transition: width 1s ease-out 0.3s;
+}
+
+.skills-list li.visible .progress {
+    width: var(--progress-width);
 }
 
 /* Contact Form Section */
@@ -257,6 +276,44 @@ body {
     color: #93c5fd;
 }
 
+/* Animation for sections (excluding skills) */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation for skills list items */
+@keyframes slideInSkill {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Initial state for sections to animate on scroll */
+.section.animate-on-scroll {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Triggered state for sections */
+.section.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
 /* PDF-Specific Styles */
 @media print {
     body {
@@ -286,7 +343,9 @@ body {
     }
 
     .header-text h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Reduced for print */
+        white-space: normal;
+        word-break: break-word;
     }
 
     .header-text h3 {
@@ -336,6 +395,8 @@ body {
         font-size: 0.8rem;
         padding: 6px 12px;
         background: none;
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .progress-bar {
@@ -344,6 +405,7 @@ body {
 
     .progress {
         background: #3b82f6 !important;
+        width: var(--progress-width);
     }
 
     .contact-form {
@@ -354,6 +416,15 @@ body {
         padding: 10px;
         background: linear-gradient(45deg, #1e3a8a, #3b82f6);
         font-size: 0.75rem;
+    }
+
+    /* Disable animations for print */
+    .section.animate-on-scroll, .section.animate-on-scroll.visible,
+    .skills-list li, .skills-list li.visible {
+        opacity: 1;
+        transform: translateX(0);
+        animation: none;
+        transition: none;
     }
 }
 
@@ -372,7 +443,10 @@ body {
     }
 
     .header-text h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Reduced for mobile */
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.3;
     }
 
     .header-text h3 {

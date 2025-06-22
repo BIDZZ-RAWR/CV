@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Fade-In Animation for Sections
+    // Fade-In Animation for Sections on Page Load
     const sections = document.querySelectorAll('.section');
     sections.forEach((section, index) => {
         section.style.opacity = '0';
@@ -10,6 +10,49 @@ document.addEventListener('DOMContentLoaded', () => {
             section.style.opacity = '1';
             section.style.transform = 'translateY(0)';
         }, index * 300);
+    });
+
+    // Scroll-Based Left-to-Right Animation for Other Sections
+    const sectionsToAnimate = document.querySelectorAll(
+        '.section.about, .section.profile, .section.contact, .section.education, ' +
+        '.section.experience, .section.projects'
+    );
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        threshold: 0.1, // Trigger when 10% of the section is visible
+        rootMargin: '0px'
+    };
+
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, observerOptions);
+
+    sectionsToAnimate.forEach(section => {
+        section.classList.add('animate-on-scroll');
+        sectionObserver.observe(section);
+    });
+
+    // Scroll-Based Animation for Skills List Items
+    const skillsItems = document.querySelectorAll('.skills-list li');
+    const skillsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add visible class with a staggered delay
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 150); // 150ms delay per item
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    skillsItems.forEach(item => {
+        skillsObserver.observe(item);
     });
 
     // Contact Form Submission (WhatsApp)
@@ -28,16 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // WhatsApp message format
-        const whatsappMessage = `Subject: Pesan Baru dari ${name}
-
-Halo Muhammad Abid,
-
-Pesan baru dari kontak:
-- Nama: ${name}
-- Email: ${email}
-- Pesan: ${message}
-
-Balas secepatnya ya!`;
+        const whatsappMessage = `Subject: Pesan Baru dari ${name}\n\nHalo Muhammad Abid,\n\nPesan baru dari kontak:\n- Nama: ${name}\n- Email: ${email}\n- Pesan: ${message}\n\nBalas secepatnya ya!`;
 
         // Encode message for URL
         const encodedMessage = encodeURIComponent(whatsappMessage);
