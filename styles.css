@@ -130,7 +130,7 @@ body {
 
 .period {
     font-size: 0.95rem;
-    color: #4b5563;
+    color: #000000; /* Change gray to black */
     font-style: italic;
 }
 
